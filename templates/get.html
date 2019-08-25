@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get</title>
+</head>
+<body>
+<h1>获取学生列表</h1>
+<ul>
+    {% for s in people %}
+        <li>Name:{{ s.s_name }}--Age:{{ s.s_age }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
