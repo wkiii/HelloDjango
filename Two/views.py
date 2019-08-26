@@ -16,7 +16,6 @@ def index(request):
 
 def add(request):
     student = Student()
-    print(type(student))
     student.s_name = 'Jerry-%d' % random.randrange(10000)
     student.s_age = random.randrange(100)
     student.save()
@@ -25,6 +24,4 @@ def add(request):
 
 def get(request):
     people = Student.objects.all()
-    for i in people:
-        print(i.s_name)
     return render(request,"get.html",locals())
